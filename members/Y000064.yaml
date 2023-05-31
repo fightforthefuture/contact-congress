@@ -4,8 +4,8 @@ contact_form:
   action: /content/contact-senator
   steps:
     - visit: "https://www.young.senate.gov/contact/email-todd"
-    - click_on:
-        - selector: "#newsletterModal .close"
+    - javascript:
+        - value: "(function() { const btn = document.querySelector('#newsletterModal .close'); if (btn) { btn.click(); } })();"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
