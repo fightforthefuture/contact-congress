@@ -87,7 +87,7 @@ contact_form:
         - selector: "button.elementor-button"
     - find:
         - selector: ".elementor-message-success"
-          value: "The form was sent successfully."
+          value: "Your submission was successful."
   success:
     headers:
       status: 200
