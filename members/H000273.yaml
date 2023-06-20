@@ -1,3 +1,4 @@
+
 bioguide:  H000273
 contact_form:
   method: post
@@ -124,9 +125,8 @@ contact_form:
             - Transportation
             - Veterans
             - Women and Children
-    - click_on:
-        - value: Submit
-          selector: '#gform_submit_button_17'
+    - javascript:
+        - value: "document.querySelector('#gform_submit_button_11').click();"
     - wait:
         - value: 10
   success:
