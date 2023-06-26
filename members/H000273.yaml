@@ -1,4 +1,3 @@
-
 bioguide:  H000273
 contact_form:
   method: post
@@ -10,16 +9,10 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.et_pb_row_2').remove(); document.querySelector('.et_pb_section_0_tb_header').remove(); document.querySelector('.et_pb_section_0').remove(); document.querySelector('.et_pb_section_1').remove();"
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
         - value: "document.querySelector('.gform_wrapper').style.display = 'block'"
     - find:
         - selector: "#input_17_3_3"
     - fill_in:
-        - name: "input_3.3"
-          selector: "#input_17_3_3"
-          value: $NAME_FIRST
-          required: true
         - name: "input_3.6"
           selector: "#input_17_3_6"
           value: $NAME_LAST
@@ -136,11 +129,11 @@ contact_form:
     - find:
         - selector: "#gform_17"
     - find:
-        - selector: "#gform_submit_button_17" 
+        - selector: "#contact-form-emailJohn #gform_submit_button_17" 
     - javascript:
         - value: document.getElementById("gform_submit_button_17").disabled = false;
     - click_on:
-        - selector: "#gform_submit_button_17"
+        - selector: "#contact-form-emailJohn #gform_submit_button_17"
     - wait:
         - value: 10
   success:
