@@ -101,12 +101,16 @@ contact_form:
     - javascript:
         - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
     - javascript:
-        - "document.querySelector('#input_1_28').style.display = 'block';"
+        - value: "document.querySelector('#input_1_28').style.display = 'block';"
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: input[type='submit']
     - wait:
-        - value: 10   
+        - value: 10
+    - javascript:
+        - value: "document.querySelector('#gform_wrapper_1').style.display = 'block'"
   success:
     headers:
       status: 200
