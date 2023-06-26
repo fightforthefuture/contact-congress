@@ -1,7 +1,7 @@
 bioguide:  K000377
 contact_form:
   method: post
-  action: /#wpcf7-f8521-p45-o1
+  action: /
   steps:
     - visit: "https://www.kelly.senate.gov/contact/contact-form/"
     - wait:
@@ -10,6 +10,8 @@ contact_form:
         - value: "document.querySelector('.elementor-location-header').remove();"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "document.querySelector('#gform_wrapper_1').style.display = 'block'"
     - fill_in:
         - name: "input_2"
           selector: "input[name='input_2']"
@@ -60,10 +62,10 @@ contact_form:
              Agriculture: AGR
              Animal Rights: ANIMAL RIGHTS
              Appropriations: APP
-             Arts & Humanities: ARTS
-             Banking & Financial Services: FIN_OVSIGHT
+             "Arts & Humanities": ARTS
+             "Banking & Financial Services": FIN_OVSIGHT
              Budget: NO CODE
-             Campaign/Election Reform: CAMPR
+             "Campaign/Election Reform": CAMPR
              Children: KIDS
              Consumer Protection: CONSUMER PROTECTION
              Defense and Military: DEF or MIL
@@ -93,18 +95,18 @@ contact_form:
              Trade: TRADE
              Transportation: TRANSPO
              Veterans: VET
-             Women and Children: WOMENS ISSUES.P
+             Women and Children: "WOMENS ISSUES.P"
+    - click_on:
+        - selector: "#choice_1_18_0"
     - javascript:
-        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
-    - recaptcha:
-        - value: true
+        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
+    - javascript:
+        - "document.querySelector('#input_1_28').style.display = 'block';"
     - click_on:
         - value: Submit
           selector: input[type='submit']
     - wait:
-        - value: 10
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"    
+        - value: 10   
   success:
     headers:
       status: 200

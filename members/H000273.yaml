@@ -2,11 +2,19 @@
 bioguide:  H000273
 contact_form:
   method: post
-  action: /#wpcf7-f8521-p45-o1
+  action: /email-john/#gf_17
   steps:
     - visit: "https://www.hickenlooper.senate.gov/email-john/#contact-form-emailJohn"
     - wait:
         - value: 3
+    - javascript:
+        - value: "document.querySelector('.et_pb_row_2').remove(); document.querySelector('.et_pb_section_0_tb_header').remove(); document.querySelector('.et_pb_section_0').remove(); document.querySelector('.et_pb_section_1').remove();"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "document.querySelector('.gform_wrapper').style.display = 'block'"
+    - find:
+        - selector: "#input_17_3_3"
     - fill_in:
         - name: "input_3.3"
           selector: "#input_17_3_3"
@@ -125,8 +133,14 @@ contact_form:
             - Transportation
             - Veterans
             - Women and Children
+    - find:
+        - selector: "#gform_17"
+    - find:
+        - selector: "#gform_submit_button_17" 
     - javascript:
-        - value: "document.querySelector('#gform_submit_button_11').click();"
+        - value: document.getElementById("gform_submit_button_17").disabled = false;
+    - click_on:
+        - selector: "#gform_submit_button_17"
     - wait:
         - value: 10
   success:
