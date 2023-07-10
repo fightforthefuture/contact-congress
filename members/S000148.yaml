@@ -3,33 +3,9 @@ contact_form:
   method: post
   action: /contact/message-chuck
   steps:
-<<<<<<< HEAD
     - visit: "https://www.schumer.senate.gov/contact/message-chuck"
     - find:
       - selector: ".amend-form-container.loaded"
-=======
-    - visit: "http://www.schumer.senate.gov/contact/email-chuck"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
-        - value: document.querySelector('.MobileHeader')?.remove()
-    - javascript:
-        - value: document.querySelector('.SiteHeader')?.remove()
-    - javascript:
-        - value: document.querySelector('.SiteLayout__siteHeader')?.remove()
-    # - select:
-    #     - name: actions
-    #       selector: "#actions"
-    #       value: opinion
-    #       required: true
-    #       options:
-    #         "--Select an Option--": select
-    #         Share your opinion or comments on bills or other issues: opinion
-    #         Request a flag to be flown over the Capitol: flag
-    #         Request help with a federal agency: federal_agency
-    # - wait:
-    #     - value: 3
->>>>>>> upstream/master
     - fill_in:
         - name: input_B60C9D58-0D67-1F93-8771-1560AD920940
           selector: "#input-B60C9D58-0D67-1F93-8771-1560AD920940"
