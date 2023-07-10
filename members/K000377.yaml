@@ -9,8 +9,6 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.elementor-location-header').remove();"
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
         - value: "document.querySelector('#gform_wrapper_1').style.display = 'block'"
     - fill_in:
         - name: "input_2"
@@ -99,9 +97,9 @@ contact_form:
     - click_on:
         - selector: "#choice_1_18_0"
     - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
+        - value: document.querySelector('#gform_1').insertAdjacentHTML('beforeend', "<textarea name='g-recaptcha-response' id='g-recaptcha-response'></textarea>");
     - javascript:
-        - value: "document.querySelector('#input_1_28').style.display = 'block';"
+        - value: "document.querySelector('#gform_1').style.backgroundColor = 'blue';"
     - recaptcha:
         - value: true
     - click_on:
