@@ -5,9 +5,15 @@ contact_form:
   steps:
     - visit: "http://www.murphy.senate.gov/contact"
     - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
         - value: "document.getElementsByClassName('SiteLayout__header')[0].remove()"
     - wait:
         - value: 4
+    - javascript:
+        - value: "document.querySelector('#FE378C8B-ECA5-FC96-D7EE-18EE82AE3ABD').style.display = 'block';"
+    - find:
+        - selector: "#FE378C8B-ECA5-FC96-D7EE-18EE82AE3ABD"
     - find:
         - selector: "#issue-type"
     - select:
