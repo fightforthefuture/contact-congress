@@ -1,9 +1,9 @@
-bioguide:  G000574
+bioguide:  A000382
 contact_form: 
   method: post
   action: ""
   steps: 
-  - visit: "https://www.gallego.senate.gov/"
+  - visit: "https://www.alsobrooks.senate.gov/"
   - fill_in:
         - name: form_fields[name]
           selector: "#form-field-name"

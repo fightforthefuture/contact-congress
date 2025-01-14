@@ -1,9 +1,9 @@
-bioguide:  B001303
+bioguide:  M001242
 contact_form:
   method: post
-  action: 
+  action:
   steps:
-  - visit: "https://www.bluntrochester.senate.gov/"
+  - visit: https://www.moreno.senate.gov/
   - fill_in:
           - name: form_fields[name]
             selector: "#form-field-name"
@@ -51,30 +51,26 @@ contact_form:
               Animal Welfare: AN
               Arts, Museums, & Libraries: ART
               Banking & Financial Services: BANK
-              Budget and Economy: BUD
               Campaign Finance Reform: CFR
               Child Tax Credit: CTC
-              Chemical Safety: CHEM
               Civil Rights/Humanities: CIVIL
               Civil Service/Postal: CIVILSERV
               Congress: CONG
               Defense & Military: DEF
               Economy: ECON
               Education: EDU
-              Election Reform & Voting Rights: ELECT
-              Energy & Climate: ENE
-              Environment: ENV
-              Federal Court Nominations: FEDCOURT
-              Foreign Relations: FR
-              Foreign Trade: FT
-              Foster Care & Adoption: ADOPT
+              Elections: ELECT
+              Energy: ENE
+              Environmental: ENV
+              Family/Marriage: FAM
+              Food Safety: FOOD
               Governmental Reform: GOV
               Guns: GUN
               Health: HEA
+              Homeland Security: HOM
               Housing: HUD
               Immigration: IMM
               Infrastructure: INFRA
-              International Relations: INT
               Judiciary: JUD
               Labor: LAB
               LGBT: LGBT
@@ -82,15 +78,16 @@ contact_form:
               Other: OTHER
               Postal Service: POST
               Science & Technology: SCI
-              Social Issues: SOC
+              Senior Citizens: SENIORS
               Small Business: SM.BUS
+              Social Issues: SOC
               Social Security: SSEC
               Taxes/IRS: TAX
-              Telecommunications: TEL
+              Telecommunications: TELE
               Transportation: TRA
-              Trade: TRADE
+              Veterans: VET
+              Welfare: WEL
               Women's Issues: WOMEN
-              Water: WATER
   - select:
           - name: form_fields[field_dd4016c]
             selector: "#form-field-field_dd4016c"
