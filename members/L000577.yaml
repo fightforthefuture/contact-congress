@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: ""
   steps:
-    - visit: "https://www.lee.senate.gov/public/index.cfm/contact"
+    - visit: "https://www.lee.senate.gov/contact"
     - javascript:
         - value: document.querySelector(".header-top").remove()
     - fill_in:
