@@ -142,13 +142,10 @@ contact_form:
             Wyoming: WY
     - javascript:
         - value: document.querySelector("#form-field-field_01539f0").value = document.querySelector("#form-field-field_01539f0").value.replace(/"/g, '');
-<<<<<<< HEAD
     # - javascript:
     #     - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     # - recaptcha:
     #     - value: true
-=======
->>>>>>> upstream/master
     - click_on:
         - selector: button[type='submit']
     - wait:
