@@ -155,6 +155,8 @@ contact_form:
         - value: document.querySelector("#input-B6480058-00F4-C7DE-E832-6566ECBE8684").value = document.querySelector("#input-B6480058-00F4-C7DE-E832-6566ECBE8684").value.replace(/"/g, '');
     - click_on:
         - selector: "button[type='submit'].btn"
+    - wait:
+        - value: 5
     - find:
         - selector: "p"
           value: "Thank you for contacting Senator Schumer."

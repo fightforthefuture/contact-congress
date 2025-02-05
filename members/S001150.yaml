@@ -162,8 +162,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#gform_submit_button_2"
-    # - recaptcha:
-    #     - value: true
+    - wait:
+        - value: 5
     - find:
         - selector: "h2"
           value: "Thank You"
