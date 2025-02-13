@@ -135,7 +135,7 @@ contact_form:
       - value: Submit
         selector: ".controls button[type='submit']"
     - wait:
-      - value: 2
+      - value: 10
     - find:
       - selector: "h2"
         value: "Thank You"
