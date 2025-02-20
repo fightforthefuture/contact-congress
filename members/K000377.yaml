@@ -4,12 +4,6 @@ contact_form:
   action: /
   steps:
     - visit: "https://www.kelly.senate.gov/contact/contact-form/"
-    - wait:
-        - value: 10
-    - javascript:
-        - value: "document.querySelector('.elementor-location-header').remove();"
-    - javascript:
-        - value: "document.querySelector('#gform_wrapper_1').style.display = 'block'"
     - fill_in:
         - name: "input_2"
           selector: "input[name='input_2']"
@@ -96,19 +90,11 @@ contact_form:
              Women and Children: "WOMENS ISSUES.P"
     - click_on:
         - selector: "#choice_1_18_0"
-    - javascript:
-        - value: document.querySelector('#gform_1').insertAdjacentHTML('beforeend', "<textarea name='g-recaptcha-response' id='g-recaptcha-response'></textarea>");
-    - javascript:
-        - value: "document.querySelector('#gform_1').style.backgroundColor = 'blue';"
     - recaptcha:
         - value: true
     - click_on:
         - value: Submit
           selector: input[type='submit']
-    - wait:
-        - value: 10
-    - javascript:
-        - value: "document.querySelector('#gform_wrapper_1').style.display = 'block'"
   success:
     headers:
       status: 200
