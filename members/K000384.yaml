@@ -4,8 +4,6 @@ contact_form:
   action: ""
   steps:
     - visit: https://www.kaine.senate.gov/contact/share-your-opinion
-    - find:
-      - selector: "#input-B388AE6D-5056-A066-6018-629F799184D7"
     - fill_in:
       - name: first
         selector: "#input-B388AE6D-5056-A066-6018-629F799184D7"
@@ -61,84 +59,74 @@ contact_form:
         value: $TOPIC
         required: Yes
         options:
-          --- Please Select an Option ---: ""
-          Abortion: Abortion
-          Agriculture: Agriculture
-          Animal Welfare: Animal Welfare
-          Arts & Humanities: Arts & Humanities
-          Banking & Financial Reform: Banking & Financial Reform
-          Budget: Budget
-          Business: Business
-          Campaign Finance Reform: Campaign Finance Reform
-          Child Welfare: Child Welfare
-          Civil Rights: Civil Rights
-          Congress & Executive Office Reform: Congress & Executive Office Reform
-          Crime & Law Enforcement: Crime & Law Enforcement
-          Cybersecurity: Cybersecurity
-          DC Statehood: D.C. Statehood
-          Disaster Relief: Disaster Relief
-          Domestic Violence/Sexual Assault: Domestic Violence/Sexual Assault
-          Economy: Economy
-          Education: Education
-          Election Issues: Election Issues
-          Emergency Management: Emergency Management
-          Energy: Energy
-          Environment & Wildlife Protection: Environment & Wildlife Protection
-          Federal Employees: Federal Employees
-          Foreign Aid: Foreign Aid
-          Foreign Relations: Foreign Relations
-          Foreign Trade: Foreign Trade
-          Gun Violence: Gun Violence
-          Health Care & Affordable Care Act: Health Care & Affordable Care Act
-          Homeland Security: Homeland Security
-          Housing: Housing
-          Immigration: Immigration
-          Intellectual Property: Intellectual Property
-          Intelligence: Intelligence
-          Judicial Issues & Nominations: Judicial Issues & Nominations
-          Medicare: Medicare
-          Mental Health: Mental Health
-          Military/Armed Services/Defense: Military/Armed Services/Defense
-          Native American Issues: Native American Issues
-          Postal Issues: Postal Issues
-          Reporter/Media Inquiry: Reporter/Media Inquiry
-          Public Lands & Natural Resources: Public Lands & Natural Resources
-          Public Welfare: Public Welfare
-          Rules & Ethics: Rules & Ethics
-          Science & Technology: Science & Technology
-          Second Amendment Rights: Second Amendment Rights
-          Small Business: Small Business
-          Social Security: Social Security
-          Space: Space
-          Supreme Court: Supreme Court Vacancy
-          Taxes: Taxes
-          Telecommunications & Internet: Telecommunications & Internet
-          Transportation & Infrastructure: Transportation & Infrastructure
-          Veterans: Veterans
-          Womens Issues: Womens Issues
-          Workforce & Labor: Workforce & Labor
+          - Abortion
+          - Agriculture
+          - Animal Welfare
+          - Arts & Humanities
+          - Banking & Financial Reform
+          - Budget
+          - Business
+          - Campaign Finance Reform
+          - Child Welfare
+          - Civil Rights
+          - Congress & Executive Office Reform
+          - Crime & Law Enforcement
+          - Cybersecurity
+          - D.C. Statehood
+          - Disaster Relief
+          - Domestic Violence/Sexual Assault
+          - Economy
+          - Education
+          - Election Issues
+          - Emergency Management
+          - Energy
+          - Environment & Wildlife Protection
+          - Federal Employees
+          - Foreign Aid
+          - Foreign Relations
+          - Foreign Trade
+          - Gun Violence
+          - Health Care & Affordable Care Act
+          - Homeland Security
+          - Housing
+          - Immigration
+          - Intellectual Property
+          - Intelligence
+          - Judicial Issues & Nominations
+          - Medicare
+          - Mental Health
+          - Military/Armed Services/Defense
+          - Native American Issues
+          - Postal Issues
+          - Reporter/Media Inquiry
+          - Public Lands & Natural Resources
+          - Public Welfare
+          - Rules & Ethics
+          - Science & Technology
+          - Second Amendment Rights
+          - Small Business
+          - Social Security
+          - Space
+          - Supreme Court Vacancy
+          - Taxes
+          - Telecommunications & Internet
+          - Transportation & Infrastructure
+          - Veterans
+          - Womens Issues
+          - Workforce & Labor
       - name: response
         selector: "#input-B388B02A-5056-A066-602B-852F0E0961D4"
         value: "Yes"
         required: Yes
       - name: newsletter
         selector: "#newslettertoggle"
-        value: "Yes"
+        value: "No"
         required: Yes
     - javascript:
-        - value: "document.querySelector('#issues-form-select-list-0').checked = true;"
-    - javascript:
-        - value: document.querySelector("#input-B388B084-5056-A066-6090-BF0C2E9BE07B").value = document.querySelector("#input-B388B084-5056-A066-6090-BF0C2E9BE07B").value.replace(/"/g, '');
-    - wait:
-      - value: 2
+        - value: document.querySelector("#input-B388B084-5056-A066-6090-BF0C2E9BE07B").value = document.querySelector("#input-B388B084-5056-A066-6090-BF0C2E9BE07B").value.replace(/"/g, '').replace(/’/g, '');
     - click_on:
       - value: Submit
         selector: ".controls button[type='submit']"
-    - wait:
-      - value: 10
-    - find:
-      - selector: "h2"
-        value: "Thank You"
   success:
     headers:
       status: 200
